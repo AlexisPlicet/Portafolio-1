@@ -1,0 +1,255 @@
+/* ===== RESET BÁSICO ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #020617;
+    color: #e5e7eb;
+    line-height: 1.6;
+}
+
+p {
+    font-size: 0.95rem;
+}
+
+/* ===== BARRA SUPERIOR ===== */
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(15, 23, 42, 0.95);
+    border-bottom: 1px solid #1e293b;
+    backdrop-filter: blur(10px);
+}
+
+.topbar-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0.75rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+
+/* LOGO */
+.logo-text {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    color: #e5e7eb;
+}
+
+.logo-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    background: radial-gradient(circle at 30% 30%, #38bdf8, #0ea5e9);
+    box-shadow: 0 0 12px rgba(56, 189, 248, 0.9);
+}
+
+/* ===== NAV ===== */
+.main-nav a {
+    display: inline-block;
+    text-decoration: none;
+    background: transparent;
+    border: 1px solid #38bdf8;
+    color: #38bdf8;
+    cursor: pointer;
+    font-size: 0.95rem;
+    margin-left: 0.3rem;
+    padding: 0.25rem 0.65rem;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: 0.25s ease;
+}
+
+.main-nav a:hover {
+    background: rgba(56, 189, 248, 0.15);
+    transform: scale(1.08);
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.4);
+}
+
+.main-nav .active {
+    background: rgba(56,189,248,0.25);
+    color: #fff;
+}
+
+/* ===== CONTENEDOR PRINCIPAL ===== */
+main {
+    max-width: 1000px;
+    margin: 1.5rem auto 3rem;
+    padding: 0 1.25rem;
+}
+
+/* ===== HERO ===== */
+.hero {
+    padding: 2.5rem 0 1.5rem;
+}
+
+.hero-title {
+    font-size: clamp(2rem, 5vw, 2.4rem);
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+}
+
+.hero-subtitle {
+    font-size: 1rem;
+    color: #cbd5f5;
+    margin-bottom: 1.25rem;
+}
+
+.tag {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #94a3b8;
+    margin-bottom: 0.75rem;
+}
+
+/* ===== BOTONES ===== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 1.2rem;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: 0.2s;
+    font-size: 0.9rem;
+}
+
+.btn.primary {
+    background: linear-gradient(135deg, #0ea5e9, #22c55e);
+    color: #0b1120;
+    font-weight: 600;
+}
+
+.btn.primary:hover {
+    filter: brightness(1.05);
+    transform: translateY(-1px);
+}
+
+.btn.secondary {
+    border: 1px solid #334155;
+    color: #e5e7eb;
+}
+
+.btn.secondary:hover {
+    background: #0f172a;
+}
+
+/* ===== BADGES ===== */
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.badge {
+    background: rgba(15, 23, 42, 0.9);
+    border: 1px solid #1f2937;
+    padding: 0.25rem 0.7rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+}
+
+/* ===== TARJETAS ===== */
+.card {
+    background: radial-gradient(circle at top left, rgba(15, 23, 42, 0.8), #020617);
+    border-radius: 0.9rem;
+    border: 1px solid #1f2937;
+    padding: 1.15rem 1.25rem;
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.8);
+    margin-bottom: 1.5rem;
+}
+
+/* ===== ENCABEZADOS DE PÁGINA ===== */
+.page-header {
+    margin-bottom: 1.25rem;
+    text-align: left;
+}
+
+.page-header h1 {
+    font-size: 1.6rem;
+    margin-bottom: 0.25rem;
+}
+
+/* ===== LISTA DE HERRAMIENTAS (ARREGLADA) ===== */
+.tool-list {
+    margin-top: 22px !important;
+    margin-bottom: 22px !important;
+    padding-left: 25px !important;
+    list-style-type: disc;
+    line-height: 1.6;
+}
+
+.tool-list li {
+    margin-bottom: 8px !important;
+    font-size: 0.95rem;
+}
+
+/* ===== LISTAS ===== */
+.skills-list,
+.courses-list,
+.project-list {
+    list-style: disc;
+    padding-left: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.skills-list li,
+.courses-list li,
+.project-list li {
+    margin-bottom: 0.4rem;
+}
+
+/* ===== CONTACTO ===== */
+.contact-data p {
+    margin-bottom: 0.35rem;
+    font-size: 0.9rem;
+}
+
+.contact-data a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+.contact-data a:hover {
+    text-decoration: underline;
+}
+
+/* ===== PROYECTOS ===== */
+.project-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+    border-top: 1px solid #111827;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
+    color: #6b7280;
+    font-size: 0.85rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 800px) {
+    .topbar-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
